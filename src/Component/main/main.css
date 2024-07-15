@@ -1,0 +1,190 @@
+:root{
+    --PrimaryColor: hsl(199, 100%, 33%);
+--SecondaryColor: hsl(187, 85%, 43%);
+--gradientColor: linear-gradient(to right, hsl(187,
+85%, 43%), hsl(199, 100%, 33%));
+--whiteColor: hsl(0, 0%, 100%);
+--blackColor: hsl(201, 33%, 16%);
+--textColor: hsl(240, 4%, 36%);
+--whiteColorDeam: hsl(0, 0%, 93%);
+--greyText: rgb(190, 190, 190);
+--inputColor: rgb(239, 239, 239);
+--bodyColor: rgb(240, 240, 246);
+--cardBG: rgb(225, 225, 235);
+--cardHover:rgb(255,255,255);
+
+}
+
+.main{
+    width: 100%;
+}
+
+.main.setTitle.title{
+ position: relative;
+ width: max-content;
+ color: var(--textColor);
+ margin: 1rem 0;
+ z-index: 2;
+}
+
+.main.setTitle.title::after{
+    position: absolute;
+    content: ' ';
+    background: var(--SecondaryColor);
+    height: 5px;
+    width: 120px;
+    right: 0;
+    bottom: 5px;
+    z-index: -1;
+}
+
+.setContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the column width as needed */
+    gap: 20px; /* Adjust the gap value to create the desired spacing between the cards */
+  }
+  
+
+.singleDestination {
+    /* display: flex; */
+    height: 100%;
+    display: grid;
+    width: 100%;
+    row-gap: 10px;
+    padding: 2rem;
+    border-radius: 20px;
+    align-items: center;
+    background: var(--cardBG);
+    box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+    overflow: hidden;
+    margin-bottom: 2px;
+  }
+  
+
+.singleDestination:hover{
+    background: var(--cardHover);
+    box-shadow: 1 4px 4px rgba( 140, 140, 141, 0.549);
+    transition: .3s ease;
+}
+
+.singleDestination.imageDiv {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+   margin-top: 2px;
+   align-items: center;
+  }
+  
+
+  .imageDiv img {
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 2s ease;
+  }
+  
+  .imageDiv img:hover {
+    transform: scale(1.1);
+  }
+
+.main.setContent.singleDestination.cardInfo{
+   
+    padding: 2rem;
+    
+}
+
+.cardInfo.destTitle{
+    margin: auto;
+    color: var(--blackColor);
+    font-size: .5rem;
+}
+
+.continent{
+ gap: .10rem;
+ margin: 0.5rem;
+}
+.icon1{
+    color: var(--textColor);
+    font-size: 50px;
+}
+
+.continent.name{
+    color: var(--textColor);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.fees{
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-top: 1.5px solid var(--greyText);
+    border-bottom: 1.5px solid var(--greyText);
+    display: flex;
+    align-items: center;
+}
+
+.fees.grade{
+    color: var(--textColor);
+    max-width: 100px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.grade small {
+    background: var(--gradientColor);
+    border-radius: 1rem;
+    padding: 2px 10px;
+    font-size: 12px;
+    color: var(--whiteColor);
+    margin-left: 5px; /* Adjust margin as needed */
+    display: inline-block; /* Ensure it behaves like a block element */
+  }
+  
+  
+
+.price{
+    font-size: 2rem;
+    color: var(--blackColor);
+}
+
+.desc{
+    font-size: 13.5px;
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+.btn{
+    margin-top: 1rem;
+    color: var(--whiteColor);
+    font-weight: 600;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.btn .icon{
+    align-self: center;
+    font-size: 18px;
+    color: var(--whiteColor);
+}
+.singleDestination:hover {
+    background: var(--cardHover);
+    box-shadow: 1px 4px 4px rgba(140, 140, 141, 0.549);
+    transition: 0.3s ease;
+}
+
+@media screen and (min-width:500px) {
+    .title{
+        font-size: 1.5rem;
+    }
+
+    .title::after{
+        width: 155px !important;
+    }
+}
